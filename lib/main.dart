@@ -5,6 +5,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:uk_club_template/sidebar/sidebar_layout.dart';
 import 'notifier/achievement_images_notifier.dart';
@@ -16,7 +17,7 @@ import 'notifier/management_body_notifier.dart';
 import 'notifier/second_team_class_notifier.dart';
 import 'notifier/sidebar_notifier.dart';
 import 'notifier/third_team_class_notifier.dart';
-
+import '../sidebar/sidebar.dart';
 import '../notifier/coaches_reviews_comment_notifier.dart';
 import '../notifier/founders_reviews_comment_notifier.dart';
 import './notifier/cum_motm_players_stats_info_notifier.dart';
@@ -137,6 +138,12 @@ class MyAppState extends State<MyApp> {
       }
       setState(() {});
     });
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+
   }
 
   @override

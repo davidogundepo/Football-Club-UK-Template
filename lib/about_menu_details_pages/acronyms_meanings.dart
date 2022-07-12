@@ -31,6 +31,7 @@ String lw = "LW - Left Winger\n\n";
 String rw = "RW - Right Winger\n\n";
 String cf = "CF - Center Forward\n\n";
 String goalsConceded = "Goals Con. - Goals Conceded\n\n";
+String stars = "** - Flawed or Not Accurate Info\n\n";
 
 
 

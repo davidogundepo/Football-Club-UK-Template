@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:toast/toast.dart';
@@ -186,7 +187,7 @@ class _CoachesDetailsPage extends State<CoachesDetailsPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Tooltip(
-                  message: coachesNotifier?.currentCoaches.name,
+                  message: coachesNotifier.currentCoaches.name,
                   child: SizedBox(
                     width: MediaQuery
                         .of(context)
@@ -326,6 +327,13 @@ class _CoachesDetailsPage extends State<CoachesDetailsPage> {
 
   @override
   initState() {
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+
+
     _confettiController =
         ConfettiController(duration: const Duration(seconds: 35));
     _confettiController?.play();

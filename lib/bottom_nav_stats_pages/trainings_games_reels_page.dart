@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../api/trainings_games_reels_api.dart';
 import '../notifier/trainings_games_reels_notifier.dart';
 import'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -27,6 +28,11 @@ class TrainingsAndGamesReelsPage extends StatelessWidget implements PreferredSiz
   Widget build(BuildContext context) {
     trainingsAndGamesReelsNotifier = Provider.of<TrainingsAndGamesReelsNotifier>(context);
     getTrainingsAndGamesReels(trainingsAndGamesReelsNotifier);
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
 
     return Scaffold(
       backgroundColor: const Color.fromRGBO(27, 36, 48, 1),

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:ui' as ui;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -77,13 +78,29 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
   final bool isSidebarOpened = false;
   final _animationDuration = const Duration(milliseconds: 500);
 
+
+  Stream<DocumentSnapshot<Map<String, dynamic>>> getDataFromFirestore() {
+    return FirebaseFirestore.instance.collection('SliversPages').doc('non_slivers_pages').snapshots();
+  }
+
+
+
   @override
   void initState() {
     super.initState();
+
+    getDataFromFirestore();
+
     _animationController = AnimationController(vsync: this, duration: _animationDuration);
     isSidebarOpenedStreamController = PublishSubject<bool>();
     isSidebarOpenedStream = isSidebarOpenedStreamController.stream;
     isSidebarOpenedSink = isSidebarOpenedStreamController.sink;
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+
   }
 
   @override
@@ -204,9 +221,12 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 Opacity(
                                   opacity: 0.7,
                                   child: StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
-                                    stream: FirebaseFirestore.instance.collection('SliversPages').doc('non_slivers_pages').snapshots(),
+                                    stream: getDataFromFirestore(),
                                     builder: (context, snapshot) {
-                                    return Container(
+                                      if(snapshot.connectionState==ConnectionState.waiting){
+                                        return const Center(child: CircularProgressIndicator());
+                                      } else {
+                                        return Container(
                                       width: MediaQuery.of(context).size.width,
                                       height: MediaQuery.of(context).size.height * 0.4,
                                       decoration: BoxDecoration(
@@ -278,6 +298,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
 
 
                                     );
+                                      }
                                     },
                                   ),
                                 ),
@@ -539,9 +560,6 @@ class CustomMenuClipper extends CustomClipper<Path> {
 
 
 }
-
-
-
 
 
 class CustomPILLCardShapePainter extends CustomPainter {
