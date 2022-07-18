@@ -45,9 +45,11 @@ dependencies:
   flutter_lints: ^2.0.1
   firebase_core: ^1.19.1
   cloud_firestore: ^3.2.1
+  firebase_messaging: ^11.4.4
   firebase_auth: ^3.4.1
   firebase_crashlytics: ^2.8.4
   provider: ^6.0.3
+  http: ^0.13.4
   syncfusion_flutter_core: ^20.2.36
   syncfusion_flutter_datagrid: ^20.2.36
   syncfusion_localizations: ^20.2.36
@@ -78,6 +80,7 @@ dependencies:
   clay_containers: ^0.3.2
   confetti: ^0.7.0
   parallax_rain: ^1.1.0
+  flutter_local_notifications: ^9.7.0
 
 flutter_native_splash:
   image: assets/images/about_app_sp.png

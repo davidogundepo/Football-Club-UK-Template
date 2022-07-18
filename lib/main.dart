@@ -3,11 +3,13 @@ import 'dart:async';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:uk_club_template/sidebar/sidebar_layout.dart';
+import 'api/PushNotificationService.dart';
 import 'notifier/achievement_images_notifier.dart';
 import 'notifier/club_arial_notifier.dart';
 import 'notifier/club_captains_notifier.dart';
@@ -42,9 +44,10 @@ void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await PushNotificationService().setupInteractedMessage();
   FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-  runZonedGuarded(() {
+  runZonedGuarded(() async {
     runApp(MultiProvider(
         providers: [
           ChangeNotifierProvider(
@@ -114,6 +117,11 @@ void main() async {
         ],
         child: const MyApp()
     ));
+    RemoteMessage? initialMessage =
+        await FirebaseMessaging.instance.getInitialMessage();
+    if (initialMessage != null) {
+      // App received a notification when it was killed
+    }
   }, FirebaseCrashlytics.instance.recordError);
 }
 
