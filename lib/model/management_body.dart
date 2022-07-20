@@ -10,6 +10,7 @@ class ManagementBody {
   String? facebook;
   String? id;
   String? image;
+  String? imageTwo;
   String? instagram;
   String? name;
   String? phone;
@@ -21,6 +22,7 @@ class ManagementBody {
     email = data['email'];
     facebook = data['facebook'];
     image = data['image'];
+    imageTwo = data['image_two'];
     instagram = data['instagram'];
     name = data['name'];
     phone = data['phone'];

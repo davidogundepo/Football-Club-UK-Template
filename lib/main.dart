@@ -19,7 +19,6 @@ import 'notifier/management_body_notifier.dart';
 import 'notifier/second_team_class_notifier.dart';
 import 'notifier/sidebar_notifier.dart';
 import 'notifier/third_team_class_notifier.dart';
-import '../sidebar/sidebar.dart';
 import '../notifier/coaches_reviews_comment_notifier.dart';
 import '../notifier/founders_reviews_comment_notifier.dart';
 import './notifier/cum_motm_players_stats_info_notifier.dart';
@@ -32,7 +31,6 @@ import './notifier/most_fouled_yc_players_stats_info_notifier.dart';
 import './notifier/most_fouled_rc_players_stats_info_notifier.dart';
 import './notifier/top_goals_players_stats_info_notifier.dart';
 import './notifier/trainings_games_reels_notifier.dart';
-import 'bottom_nav_stats_pages/bottom_navigator.dart';
 
 Color? backgroundColor = Colors.indigo[400];
 Color? appBarIconColor = Colors.indigo[200];

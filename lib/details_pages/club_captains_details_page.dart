@@ -37,6 +37,9 @@ Color confettiColorTwelve = Colors.cyan;
 
 late CaptainsNotifier captainsNotifier;
 
+var crossFadeView = CrossFadeState.showFirst;
+
+
 class CaptainsDetailsPage extends StatefulWidget {
 
   const CaptainsDetailsPage({Key? key, this.title}) : super(key: key);
@@ -98,30 +101,94 @@ class _CaptainsDetailsPage extends State<CaptainsDetailsPage>{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Tooltip(
-                  message: captainsNotifier.currentCaptains.name,
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: Card(
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10),
-                      semanticContainer: true,
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: CachedNetworkImage(
-                        imageUrl: captainsNotifier.currentCaptains.image!,
-                        fit: BoxFit.cover,
-                        placeholder: (context, imageURL) =>
-                        const CircularProgressIndicator(),
-                        errorWidget: (context, url, error) =>
-                        const Icon(MdiIcons.alertRhombus),
 
+              if (captainsNotifier.currentCaptains.imageTwo.toString().isEmpty) ... [
+                Tooltip(
+                    message: captainsNotifier.currentCaptains.name,
+                    child: GestureDetector(
+                      onTap: () => setState(() {
+                        crossFadeView = crossFadeView == CrossFadeState.showFirst
+                            ? CrossFadeState.showSecond : CrossFadeState.showFirst;
+                      }),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          elevation: 5,
+                          margin: const EdgeInsets.all(10),
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: AnimatedCrossFade(
+                            crossFadeState: crossFadeView == CrossFadeState.showFirst
+                                ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+                            duration: const Duration(milliseconds: 1000),
+                            firstChild: CachedNetworkImage(
+                              imageUrl: captainsNotifier.currentCaptains.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                            secondChild: CachedNetworkImage(
+                              imageUrl: captainsNotifier.currentCaptains.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  )
-              ),
+                    )),
+              ]
+              else ... [
+                Tooltip(
+                    message: captainsNotifier.currentCaptains.name,
+                    child: GestureDetector(
+                      onTap: () => setState(() {
+                        crossFadeView = crossFadeView == CrossFadeState.showFirst
+                            ? CrossFadeState.showSecond : CrossFadeState.showFirst;
+                      }),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          elevation: 5,
+                          margin: const EdgeInsets.all(10),
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: AnimatedCrossFade(
+                            crossFadeState: crossFadeView == CrossFadeState.showFirst
+                                ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+                            duration: const Duration(milliseconds: 1000),
+                            firstChild: CachedNetworkImage(
+                              imageUrl: captainsNotifier.currentCaptains.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                            secondChild: CachedNetworkImage(
+                              imageUrl: captainsNotifier.currentCaptains.imageTwo!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                          ),
+                        ),
+                      ),
+                    )),
+              ],
+
               Material(
                 color: materialBackgroundColor,
                 child: InkWell(

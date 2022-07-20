@@ -111,6 +111,8 @@ late FirstTeamClassNotifier firstTeamClassNotifier;
 
 Map<int, Widget>? userBIO;
 
+var crossFadeView = CrossFadeState.showFirst;
+
 
 dynamic _autoBio;
 dynamic _bestMoment;
@@ -223,28 +225,94 @@ class _SubPageState extends State<SubPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Tooltip(
-                  message: firstTeamClassNotifier.currentFirstTeamClass.name,
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: Card(
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10),
-                      semanticContainer: true,
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+
+              if (firstTeamClassNotifier.currentFirstTeamClass.imageTwo.toString().isEmpty) ... [
+                Tooltip(
+                    message: firstTeamClassNotifier.currentFirstTeamClass.name,
+                    child: GestureDetector(
+                      onTap: () => setState(() {
+                        crossFadeView = crossFadeView == CrossFadeState.showFirst
+                            ? CrossFadeState.showSecond : CrossFadeState.showFirst;
+                      }),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          elevation: 5,
+                          margin: const EdgeInsets.all(10),
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: AnimatedCrossFade(
+                            crossFadeState: crossFadeView == CrossFadeState.showFirst
+                                ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+                            duration: const Duration(milliseconds: 1000),
+                            firstChild: CachedNetworkImage(
+                              imageUrl: firstTeamClassNotifier.currentFirstTeamClass.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                            secondChild: CachedNetworkImage(
+                              imageUrl: firstTeamClassNotifier.currentFirstTeamClass.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                          ),
+                        ),
                       ),
-                      child: CachedNetworkImage(
-                        imageUrl: firstTeamClassNotifier.currentFirstTeamClass.image!,
-                        fit: BoxFit.cover,
-                        placeholder: (context, url) =>
-                            const CircularProgressIndicator(),
-                        errorWidget: (context, url, error) =>
-                            const Icon(MdiIcons.alertRhombus),
+                    )),
+              ]
+              else ... [
+                Tooltip(
+                    message: firstTeamClassNotifier.currentFirstTeamClass.name,
+                    child: GestureDetector(
+                      onTap: () => setState(() {
+                        crossFadeView = crossFadeView == CrossFadeState.showFirst
+                            ? CrossFadeState.showSecond : CrossFadeState.showFirst;
+                      }),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          elevation: 5,
+                          margin: const EdgeInsets.all(10),
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: AnimatedCrossFade(
+                            crossFadeState: crossFadeView == CrossFadeState.showFirst
+                                ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+                            duration: const Duration(milliseconds: 1000),
+                            firstChild: CachedNetworkImage(
+                              imageUrl: firstTeamClassNotifier.currentFirstTeamClass.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                            secondChild: CachedNetworkImage(
+                              imageUrl: firstTeamClassNotifier.currentFirstTeamClass.imageTwo!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  )),
+                    )),
+              ],
+              
               Material(
                 color: materialBackgroundColor,
                 child: InkWell(

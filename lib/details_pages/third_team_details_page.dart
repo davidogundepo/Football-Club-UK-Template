@@ -111,6 +111,9 @@ late ThirdTeamClassNotifier thirdTeamClassNotifier;
 Map<int, Widget>? userBIO;
 
 
+var crossFadeView = CrossFadeState.showFirst;
+
+
 dynamic _autoBio;
 dynamic _bestMoment;
 dynamic _dob;
@@ -223,34 +226,94 @@ class _ThirdTeamClassDetailsPage extends State<ThirdTeamClassDetailsPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Tooltip(
-                  message: thirdTeamClassNotifier.currentThirdTeamClass.name,
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-//                  foregroundDecoration: const BoxDecoration(
-//                    image: DecorationImage(
-//                        image: NetworkImage(
-//                            'https://p6.storage.canalblog.com/69/50/922142/85510911_o.png'),
-//                        fit: BoxFit.fill),
-//                  ),
-                    child: Card(
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10),
-                      semanticContainer: true,
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+
+              if (thirdTeamClassNotifier.currentThirdTeamClass.imageTwo.toString().isEmpty) ... [
+                Tooltip(
+                    message: thirdTeamClassNotifier.currentThirdTeamClass.name,
+                    child: GestureDetector(
+                      onTap: () => setState(() {
+                        crossFadeView = crossFadeView == CrossFadeState.showFirst
+                            ? CrossFadeState.showSecond : CrossFadeState.showFirst;
+                      }),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          elevation: 5,
+                          margin: const EdgeInsets.all(10),
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: AnimatedCrossFade(
+                            crossFadeState: crossFadeView == CrossFadeState.showFirst
+                                ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+                            duration: const Duration(milliseconds: 1000),
+                            firstChild: CachedNetworkImage(
+                              imageUrl: thirdTeamClassNotifier.currentThirdTeamClass.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                            secondChild: CachedNetworkImage(
+                              imageUrl: thirdTeamClassNotifier.currentThirdTeamClass.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                          ),
+                        ),
                       ),
-                      child: CachedNetworkImage(
-                        imageUrl: thirdTeamClassNotifier.currentThirdTeamClass.image!,
-                        fit: BoxFit.cover,
-                        placeholder: (context, url) =>
-                            const CircularProgressIndicator(),
-                        errorWidget: (context, url, error) =>
-                            const Icon(MdiIcons.alertRhombus),
+                    )),
+              ]
+              else ... [
+                Tooltip(
+                    message: thirdTeamClassNotifier.currentThirdTeamClass.name,
+                    child: GestureDetector(
+                      onTap: () => setState(() {
+                        crossFadeView = crossFadeView == CrossFadeState.showFirst
+                            ? CrossFadeState.showSecond : CrossFadeState.showFirst;
+                      }),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          elevation: 5,
+                          margin: const EdgeInsets.all(10),
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: AnimatedCrossFade(
+                            crossFadeState: crossFadeView == CrossFadeState.showFirst
+                                ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+                            duration: const Duration(milliseconds: 1000),
+                            firstChild: CachedNetworkImage(
+                              imageUrl: thirdTeamClassNotifier.currentThirdTeamClass.image!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                            secondChild: CachedNetworkImage(
+                              imageUrl: thirdTeamClassNotifier.currentThirdTeamClass.imageTwo!,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                              const Icon(MdiIcons.alertRhombus),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  )),
+                    )),
+              ],
+
               Material(
                 color: materialBackgroundColor,
                 child: InkWell(
