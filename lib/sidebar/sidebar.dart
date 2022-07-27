@@ -19,9 +19,9 @@ import '../sidebar/menu_item.dart';
 String clubName = "AFC Binley FC";
 String subtitle = "We breed elite players here";
 
-String firstTeamClassTitle = "First Team Players";
-String secondTeamClassTitle = "Second Team Players";
-String thirdTeamClassTitle = "Reserve Team Players";
+String returningPlayersTitle = "Returning Players";
+String newPlayersTitle = "New Players";
+// String thirdTeamClassTitle = "Reserve Team Players";
 String captainsTitle = "Football Club Captains";
 String coachesTitle = "Coaching Staff";
 String managementBodyTitle = "Management Body";

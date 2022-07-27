@@ -24,6 +24,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIBackgroundModes</key>
@@ -37,8 +39,6 @@
 	<string>Main</string>
 	<key>UIStatusBarHidden</key>
 	<false/>
-	<key>FirebaseAppDelegateProxyEnabled</key>
-    <false/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -305,10 +305,17 @@ class _PlayersTablePageState extends State<PlayersTablePage> {
         backgroundColor: backgroundColor,
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Players Table',
-              style: TextStyle(
-                  color: appBarIconColor
-              )
+          title: StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+            stream: FirebaseFirestore.instance.collection('SliversPages').doc('non_slivers_pages').snapshots(),
+            builder: (context, snapshot) {
+              return Text(
+              snapshot.data?.data()!['players_table'],
+                  style: TextStyle(
+                      color: appBarIconColor,
+                    fontSize: 17
+                  )
+              );
+            }
           ),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios, color: appBarIconColor),
