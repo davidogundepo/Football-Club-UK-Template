@@ -19,9 +19,9 @@ import '../sidebar/menu_item.dart';
 String clubName = "AFC Binley FC";
 String subtitle = "We breed elite players here";
 
-String returningPlayersTitle = "Returning Players";
-String newPlayersTitle = "New Players";
-// String thirdTeamClassTitle = "Reserve Team Players";
+String firstTeamClassTitle = "Returning Players";
+String secondTeamClassTitle = "New Players";
+String thirdTeamClassTitle = "Reserve Team Players";
 String captainsTitle = "Football Club Captains";
 String coachesTitle = "Coaching Staff";
 String managementBodyTitle = "Management Body";
@@ -33,25 +33,25 @@ String exitAppNo = "Oh No";
 String exitAppYes = "I Have To";
 
 
-Color gradientColor = const Color.fromRGBO(20, 63, 107, 1.0);
+Color gradientColor = const Color.fromRGBO(43, 45, 66, 1.0);
 Color gradientColorTwo = Colors.white;
-Color linearGradientColor =  const Color.fromRGBO(20, 63, 107, 1.0);
-Color linearGradientColorTwo =  const Color.fromRGBO(20, 63, 107, 1.0);
-Color boxShadowColor =  const Color.fromRGBO(20, 63, 107, 1.0);
+Color linearGradientColor =  const Color.fromRGBO(43, 45, 66, 1.0);
+Color linearGradientColorTwo =  const Color.fromRGBO(43, 45, 66, 1.0);
+Color boxShadowColor =  const Color.fromRGBO(43, 45, 66, 1.0);
 Color dividerColor = Colors.white;
 Color materialBackgroundColor = Colors.transparent;
 Color shimmerBaseColor = Colors.white;
 Color shimmerHighlightColor = Colors.white;
-Color shapeDecorationTextColor =  const Color.fromRGBO(20, 63, 107, 1.0);
-Color containerBackgroundColor =  const Color.fromRGBO(20, 63, 107, 1.0);
+Color shapeDecorationTextColor =  const Color.fromRGBO(43, 45, 66, 1.0);
+Color containerBackgroundColor =  const Color.fromRGBO(43, 45, 66, 1.0);
 Color containerIconColor = Colors.white;
-Color dialogBackgroundColor =  const Color.fromRGBO(20, 63, 107, 1.0);
+Color dialogBackgroundColor =  const Color.fromRGBO(43, 45, 66, 1.0);
 Color dialogTextColor = Colors.white;
-Color splashColor = const Color.fromRGBO(20, 63, 107, 1.0);
+Color splashColor = const Color.fromRGBO(43, 45, 66, 1.0);
 Color splashColorTwo = Colors.white;
 Color splashColorThree = Colors.white;
 Color textColor = Colors.white;
-Color textColorTwo = const Color.fromRGBO(20, 63, 107, 1.0);
+Color textColorTwo = const Color.fromRGBO(43, 45, 66, 1.0);
 Color textShadowColor = Colors.white;
 
 class SideBar extends StatefulWidget {

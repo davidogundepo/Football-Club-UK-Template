@@ -1,9 +1,12 @@
 import UIKit
 import Flutter
-import Firebase
+//import Firebase
 
 @UIApplicationMain
-@objc class AppDelegate: FlutterAppDelegate, MessagingDelegate {
+@objc class AppDelegate: FlutterAppDelegate {
+    
+//MessagingDelegate
+//{
     
     lazy var flutterEngine = FlutterEngine(name: "MyApp")
     
@@ -15,9 +18,9 @@ import Firebase
     UIApplication.shared.isStatusBarHidden = false
       
       flutterEngine.run()
-      FirebaseApp.configure()
+//      FirebaseApp.configure()
       
-      Messaging.messaging().delegate = self
+//      Messaging.messaging().delegate = self
       
       GeneratedPluginRegistrant.register(with: self.flutterEngine)
       

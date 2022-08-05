@@ -3593,7 +3593,7 @@ class _PlayersStatsAndInfoPageState extends State<PlayersStatsAndInfoPage> {
                                                                                               ),
                                                                                             ),
                                                                                           ),
-                                                                                          const SizedBox(height: 80),
+                                                                                          const SizedBox(height: 60),
                                                                                         ],
                                                                                       ),
                                                                                     ],
