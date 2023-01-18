@@ -487,11 +487,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: Icon(
                       MdiIcons.dialpad,
                       color: iconTextColor,
@@ -520,11 +522,13 @@ class _SubPageState extends State<SubPage> {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      elevation: 2,
-                      color: buttonColor,
+                    ),
                       icon: Icon(
                         MdiIcons.dialpad,
                         color: iconTextColor,
@@ -550,11 +554,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: Icon(
                       MdiIcons.message,
                       color: iconTextColor,
@@ -583,11 +589,13 @@ class _SubPageState extends State<SubPage> {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      elevation: 2,
-                      color: buttonColor,
+                    ),
                       icon: Icon(
                         MdiIcons.message,
                         color: iconTextColor,
@@ -613,11 +621,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: Icon(
                       MdiIcons.whatsapp,
                       color: iconTextColor,
@@ -648,11 +658,13 @@ class _SubPageState extends State<SubPage> {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      elevation: 2,
-                      color: buttonColor,
+                    ),
                       icon: Icon(
                         MdiIcons.message,
                         color: iconTextColor,
@@ -678,11 +690,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: Icon(
                       MdiIcons.gmail,
                       color: iconTextColor,
@@ -705,11 +719,13 @@ class _SubPageState extends State<SubPage> {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: InkWell(
                       splashColor: splashColorTwo,
-                      child: RaisedButton.icon(
-                        shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        elevation: 2,
-                        color: buttonColor,
+                      child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                         icon: Icon(
                           MdiIcons.gmail,
                           color: iconTextColor,
@@ -734,12 +750,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
-                    elevation: 2,
-                    color: buttonColor,
                     icon: Icon(MdiIcons.twitter, color: iconTextColor),
                     label: Text(twitterButton,
                         style: GoogleFonts.abel(
@@ -767,12 +784,13 @@ class _SubPageState extends State<SubPage> {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
                       elevation: 2,
-                      color: buttonColor,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                       icon: Icon(MdiIcons.twitter, color: iconTextColor),
                       label: Text(twitterButton,
                           style: GoogleFonts.abel(
@@ -797,11 +815,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: Icon(
                       MdiIcons.instagram,
                       color: iconTextColor,
@@ -830,11 +850,13 @@ class _SubPageState extends State<SubPage> {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: InkWell(
                       splashColor: splashColorTwo,
-                      child: RaisedButton.icon(
-                        shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        elevation: 2,
-                        color: buttonColor,
+                      child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                         icon: Icon(
                           MdiIcons.instagram,
                           color: iconTextColor,
@@ -859,11 +881,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: Icon(
                       MdiIcons.snapchat,
                       color: iconTextColor,
@@ -892,11 +916,13 @@ class _SubPageState extends State<SubPage> {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      elevation: 2,
-                      color: buttonColor,
+                    ),
                       icon: Icon(
                         MdiIcons.snapchat,
                         color: iconTextColorTwo,
@@ -922,11 +948,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: FaIcon(
                       FontAwesomeIcons.tiktok,
                       color: iconTextColor,
@@ -955,11 +983,13 @@ class _SubPageState extends State<SubPage> {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      elevation: 2,
-                      color: buttonColor,
+                    ),
                       icon: FaIcon(
                         FontAwesomeIcons.tiktok,
                         color: iconTextColorTwo,
@@ -985,11 +1015,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: Icon(
                       MdiIcons.facebook,
                       color: iconTextColor,
@@ -1016,11 +1048,13 @@ class _SubPageState extends State<SubPage> {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: InkWell(
                       splashColor: splashColorTwo,
-                      child: RaisedButton.icon(
-                        shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        elevation: 2,
-                        color: buttonColor,
+                      child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                         icon: Icon(
                           MdiIcons.facebook,
                           color: iconTextColor,
@@ -1047,11 +1081,13 @@ class _SubPageState extends State<SubPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 2,
-                    color: buttonColor,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                     icon: Icon(
                       MdiIcons.linkedin,
                       color: iconTextColor,
@@ -1078,11 +1114,13 @@ class _SubPageState extends State<SubPage> {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: InkWell(
                       splashColor: splashColorTwo,
-                      child: RaisedButton.icon(
-                        shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        elevation: 2,
-                        color: buttonColor,
+                      child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                         icon: Icon(
                           MdiIcons.facebook,
                           color: iconTextColor,

@@ -421,12 +421,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
-                    elevation: 2,
-                    color: buttonColor,
                     icon: Icon(MdiIcons.dialpad, color: iconTextColor),
                     label: Text(callButton,
                         style: GoogleFonts.abel(
@@ -454,12 +455,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
                       elevation: 2,
-                      color: buttonColor,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                       icon: Icon(MdiIcons.dialpad, color: iconTextColor),
                       label: Text(callButton,
                           style: GoogleFonts.abel(
@@ -484,12 +486,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
-                    elevation: 2,
-                    color: buttonColor,
                     icon: Icon(MdiIcons.message, color: iconTextColor),
                     label: Text(messageButton,
                         style: GoogleFonts.abel(
@@ -517,12 +520,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
                       elevation: 2,
-                      color: buttonColor,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                       icon: Icon(MdiIcons.message, color: iconTextColor),
                       label: Text(messageButton,
                           style: GoogleFonts.abel(
@@ -547,12 +551,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
-                    elevation: 2,
-                    color: buttonColor,
                     icon: Icon(MdiIcons.whatsapp, color: iconTextColor),
                     label: Text(whatsAppButton,
                         style: GoogleFonts.abel(
@@ -582,12 +587,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
                       elevation: 2,
-                      color: buttonColor,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                       icon: Icon(MdiIcons.message, color: iconTextColor),
                       label: Text(messageButton,
                           style: GoogleFonts.abel(
@@ -612,12 +618,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
-                    elevation: 2,
-                    color: buttonColor,
                     icon: Icon(MdiIcons.gmail, color: iconTextColor),
                     label: Text(emailButton,
                         style: GoogleFonts.abel(
@@ -639,12 +646,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
                       elevation: 2,
-                      color: buttonColor,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                       icon: Icon(MdiIcons.gmail, color: iconTextColor),
                       label: Text(emailButton,
                           style: GoogleFonts.abel(
@@ -669,12 +677,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
-                    elevation: 2,
-                    color: buttonColor,
                     icon: Icon(MdiIcons.twitter, color: iconTextColor),
                     label: Text(twitterButton,
                         style: GoogleFonts.abel(
@@ -702,12 +711,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
                       elevation: 2,
-                      color: buttonColor,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                       icon: Icon(MdiIcons.twitter, color: iconTextColor),
                       label: Text(twitterButton,
                           style: GoogleFonts.abel(
@@ -732,12 +742,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
-                    elevation: 2,
-                    color: buttonColor,
                     icon: Icon(MdiIcons.instagram, color: iconTextColor),
                     label: Text(instagramButton,
                         style: GoogleFonts.abel(
@@ -765,12 +776,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
                       elevation: 2,
-                      color: buttonColor,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                       icon: Icon(MdiIcons.instagram, color: iconTextColor),
                       label: Text(instagramButton,
                           style: GoogleFonts.abel(
@@ -795,12 +807,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
                   splashColor: splashColorTwo,
-                  child: RaisedButton.icon(
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
+                      elevation: 2,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
-                    elevation: 2,
-                    color: buttonColor,
                     icon: Icon(MdiIcons.facebook, color: iconTextColor),
                     label: Text(facebookButton,
                       style: GoogleFonts.abel(
@@ -823,12 +836,13 @@ class _ManagementBodyDetailsPage extends State<ManagementBodyDetailsPage>{
                   padding: const EdgeInsets.only(bottom: 10),
                   child: InkWell(
                     splashColor: splashColorTwo,
-                    child: RaisedButton.icon(
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
+                    child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: buttonColor,
                       elevation: 2,
-                      color: buttonColor,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
                       icon: Icon(MdiIcons.facebook, color: iconTextColor),
                       label: Text(facebookButton,
                         style: GoogleFonts.abel(
